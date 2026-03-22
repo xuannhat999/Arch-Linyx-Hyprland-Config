@@ -224,7 +224,8 @@
     // "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-connected": "{num_connections} connected\n\n{device_enumerate}",
     // "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%"
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%",
+    "on-click": "~/.config/hypr/scripts/launch_bluetui.sh"
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
@@ -237,8 +238,8 @@
     "format-linked": "󱚸",
     "format-disconnected": "󱛅",
     "format-disabled": "󰖪",
-    "on-click": "pgrep -x nmrs > /dev/null && pkill -x nmrs || nmrs"
     // "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "on-click": "~/.config/hypr/scripts/launch_wifitui.sh"
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -258,7 +259,8 @@
         "",
         ""
       ]
-    }
+    },
+    "on-click": "~/.config/hypr/scripts/launch_wiremix.sh"
   },
   // "custom/media": {
   //     "format": "{icon} {text}",
