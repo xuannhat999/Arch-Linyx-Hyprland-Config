@@ -25,5 +25,8 @@ return {
       "Yazi cwd",
       "Yazi toggle",
     },
+    keymaps = {
+      change_working_directory = "<n>",
+    },
   },
 }

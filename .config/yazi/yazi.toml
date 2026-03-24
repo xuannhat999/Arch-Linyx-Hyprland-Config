@@ -55,6 +55,7 @@ reveal = [
   { run = "termux-open %d1", desc = "Reveal", for = "android" },
   { run = "clear; exiftool %s1; echo 'Press enter to exit'; read _", desc = "Show EXIF", for = "unix", block = true },
 ]
+libreoffice = [{ run = 'libreoffice "$@"', desc = "LibreOffice" }]
 extract = [{ run = "ya pub extract --list %s", desc = "Extract here" }]
 download = [
   { run = "ya emit download --open %S", desc = "Download and open" },
@@ -64,14 +65,19 @@ nvim_folder = [
   { run = '${EDITOR} "$1" -c "cd $1"', block = true, for = "unix" },
 ]
 
+
 [open]
 rules = [
+  { url = "*.pptx", use = "libreoffice" },
+  { url = "*.docx", use = "libreoffice" },
+  { url = "*.xlsx", use = "libreoffice" },
   # Folder
   { url = "*/", use = [
     "nvim_folder",
     "open",
     "reveal",
   ] },
+
   # Text
   { mime = "text/*", use = [
     "edit",
@@ -125,6 +131,30 @@ image_bound = [10000, 10000]
 suppress_preload = false
 
 [plugin]
+prepend_preloaders = [
+  # Office Documents
+  { mime = "application/openxmlformats-officedocument.*", run = "office" },
+  { mime = "application/oasis.opendocument.*", run = "office" },
+  { mime = "application/ms-*", run = "office" },
+  { mime = "application/msword", run = "office" },
+  { url = "*.docx", run = "office" },
+  { url = "*.pptx", run = "office" },
+  { url = "*.xlsx", run = "office" },
+  { url = "*.pdf", run = "office" },
+]
+
+prepend_previewers = [
+  # Office Documents
+  { mime = "application/openxmlformats-officedocument.*", run = "office" },
+  { mime = "application/oasis.opendocument.*", run = "office" },
+  { mime = "application/ms-*", run = "office" },
+  { mime = "application/msword", run = "office" },
+  { url = "*.docx", run = "office" },
+  { url = "*.pptx", run = "office" },
+  { url = "*.xlsx", run = "office" },
+  { url = "*.pdf", run = "office" },
+]
+
 fetchers = [
   # Mimetype
   { id = "mime", url = "*/", run = "mime.dir", prio = "high" },
