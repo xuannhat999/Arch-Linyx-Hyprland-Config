@@ -24,6 +24,7 @@ alias ollama-on='sudo systemctl start ollama.service'
 alias ollama-off='sudo systemctl stop ollama.service'
 alias openclaw-gw-on='systemctl --user start openclaw-gateway.service'
 alias openclaw-gw-off='systemctl --user stop openclaw-gateway.service'
+
 function y() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
   command yazi "$@" --cwd-file="$tmp"

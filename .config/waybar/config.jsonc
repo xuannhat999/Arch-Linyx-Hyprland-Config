@@ -6,7 +6,7 @@
   "margin-left": 10,
   "margin-right": 10,
   // "position": "bottom", // Waybar position (top|bottom|left|right)
-  "height": 38, // Waybar height (to be removed for auto height)
+  "height": 35, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   "spacing": 5, // Gaps between modules (4px)
   // Choose the order of the modules
@@ -82,46 +82,8 @@
   //     "tooltip": true,
   //     "tooltip-format": "{app}: {title}"
   // },
-  // "mpd": {
-  //   "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-  //   "format-disconnected": "Disconnected ",
-  //   "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-  //   "unknown-tag": "N/A",
-  //   "interval": 5,
-  //   "consume-icons": {
-  //     "on": " "
-  //   },
-  //   "random-icons": {
-  //     "off": "<span color=\"#f53c3c\"></span> ",
-  //     "on": " "
-  //   },
-  //   "repeat-icons": {
-  //     "on": " "
-  //   },
-  //   "single-icons": {
-  //     "on": "1 "
-  //   },
-  //   "state-icons": {
-  //     "paused": "",
-  //     "playing": ""
-  //   },
-  //   "tooltip-format": "MPD (connected)",
-  //   "tooltip-format-disconnected": "MPD (disconnected)"
-  // },
-  // "idle_inhibitor": {
-  //     "format": "{icon}",
-  //     "format-icons": {
-  //         "activated": "",
-  //         "deactivated": ""
-  //     }
-  // },
   "tray": {
-    // "icon-size": 21,
     "spacing": 10
-    // "icons": {
-    //   "blueman": "bluetooth",
-    //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-    // }
   },
   "clock#date": {
     "format": "{:%a, %d/%m/%y}",
@@ -178,8 +140,8 @@
   "battery": {
     "states": {
       "good": 100,
-      "warning": 30,
-      "critical": 15
+      "warning": 25,
+      "critical": 10
     },
     "format": "{capacity}% {icon}",
     "format-full": "{capacity}% {icon}",
@@ -194,11 +156,9 @@
       "",
       "",
       ""
-    ]
+    ],
+    "on-update": "~/.config/waybar/scripts/check_battery.sh"
   },
-  // "battery#bat2": {
-  //     "bat": "BAT2"
-  // },
   "power-profiles-daemon": {
     "format": "{icon}",
     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
