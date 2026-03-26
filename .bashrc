@@ -9,6 +9,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export NO_AT_BRIDGE=1
 export _JAVA_OPTIONS='-Dsun.java2d.opengl=false -Dsun.java2d.xrender=false'
+export WB_FORCE_SYSTEM_COLORS=1
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 

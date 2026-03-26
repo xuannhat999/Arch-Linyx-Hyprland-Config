@@ -1,0 +1,62 @@
+* {
+    /* Giữ nguyên bảng màu tím khói của bạn */
+    bg-col:           #22122fE6; /* Tím tối trong suốt */
+    border-col:       #cba6f7;   /* Tím Lavender */
+    fg-col:           #d2abff;   /* Tím chữ */
+    selected-col:     #d2abff;   /* Nền khi chọn */
+    fg-selected:      #000000;   /* Chữ đen khi chọn */
+
+    background-color: transparent;
+    font: "JetBrainsMono Nerd Font 25";
+}
+
+window {
+    width:            500px;
+    height:           480px; 
+    border:           2px;
+    border-color:     @border-col;
+    border-radius:    15px;
+    background-color: @bg-col;
+    location:         center;     /* Nhảy ra giữa màn hình */
+    anchor:           center;
+    x-offset:         0;
+    y-offset:         0;
+}
+
+mainbox {
+    padding:          20px;
+    children:         [ listview ]; /* Bỏ inputbar (thanh search) */
+}
+
+listview {
+    columns:          1;
+    lines:            4;        
+    spacing:          0px;
+    cycle:            true;
+    dynamic:          true;
+    layout:           vertical;
+    fixed-height:     true;
+}
+
+element {
+    padding:          32px 0px;
+    border-radius:    10px;
+    cursor:           pointer;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       @fg-col;
+    vertical-align:   0.5;
+    horizontal-align: 0;        /* Căn giữa chữ trong item */
+}
+
+/* Ép màu khi được chọn */
+element selected {
+    background-color: @selected-col;
+    text-color:       @fg-selected;
+}
+
+element-text selected {
+    text-color:       @fg-selected;
+}

@@ -2,9 +2,10 @@ return {
   "folke/snacks.nvim",
   opts = {
     explorer = {
-      filters = {
+      files = {
         dotfiles = true, -- Luôn hiện file bắt đầu bằng dấu chấm
-        git_ignored = false, -- KHÔNG ẩn các file trong .gitignore
+        -- git_ignored = false, -- KHÔNG ẩn các file trong .gitignore
+        ignored = false,
         hidden = true, -- Hiện các file ẩn hệ thống
       },
     },

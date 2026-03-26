@@ -5,3 +5,10 @@ border-radius=10
 border-size=1
 border-color=#b29cc6
 default-timeout=3000
+padding=10
+
+[category=alert]
+text-color=#dbbe3c
+
+[category=critical]
+text-color=#e63636

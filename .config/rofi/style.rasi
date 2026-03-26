@@ -1,0 +1,75 @@
+* {
+    /* Màu sắc - Catppuccin Mocha */
+    bg-col:           #22122fE6; /* Tím tối 90% */
+    border-col:       #cba6f7;   /* Tím Lavender */
+    fg-col:           #d2abff;   /* Tím chữ */
+    selected-col:     #d2abff;   /* Nền khi chọn */
+    fg-selected:      #000000;   /* Chữ đen khi chọn */
+
+    background-color: transparent;
+}
+
+window {
+    height:           450px;
+    width:            600px;
+    border:           2px;
+    border-color:     @border-col;
+    border-radius:    16px;
+    background-color: @bg-col;
+}
+
+mainbox {
+    padding:          20px;
+    children:         [ inputbar, listview ];
+}
+
+inputbar {
+    border:           1px;
+    border-radius:    20px;
+    border-color:     @border-col;
+    margin:           0px 0px 10px;
+    padding:          5px 15px;
+    children:         [ entry ];
+}
+
+entry {
+    text-color:       @fg-col;
+    placeholder:      "Search...";
+    placeholder-color: #6e5a85;
+}
+
+listview {
+    columns:          1;
+    lines:            8;
+    fixed-height:     0;
+    dynamic:          true;
+    scrollbar:        false;
+}
+
+/* Ép tất cả các trạng thái về màu tím, không dùng màu mặc định hệ thống */
+element {
+    padding:          8px;
+    border-radius:    10px;
+    text-color:       @fg-col;
+}
+
+element normal.normal, element alternate.normal {
+    background-color: transparent;
+    text-color:       @fg-col;
+}
+
+element selected.normal, element selected.active {
+    background-color: @selected-col;
+    text-color:       @fg-selected;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+element-icon {
+    size:             1.2em;
+    margin:           0 10px 0 0;
+}
