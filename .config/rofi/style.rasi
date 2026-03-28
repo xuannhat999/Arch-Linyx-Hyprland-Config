@@ -1,5 +1,4 @@
 * {
-    /* Màu sắc - Catppuccin Mocha */
     bg-col:           #22122fE6; /* Tím tối 90% */
     border-col:       #cba6f7;   /* Tím Lavender */
     fg-col:           #d2abff;   /* Tím chữ */
@@ -20,9 +19,8 @@ window {
 
 mainbox {
     padding:          20px;
-    children:         [ inputbar, listview ];
+    children:         [ inputbar,message, listview ];
 }
-
 inputbar {
     border:           1px;
     border-radius:    20px;
@@ -32,6 +30,10 @@ inputbar {
     children:         [ entry ];
 }
 
+textbox {
+    text-color:#ffffff;
+    padding: 10px 10px;
+}
 entry {
     text-color:       @fg-col;
     placeholder:      "Search...";
@@ -46,7 +48,6 @@ listview {
     scrollbar:        false;
 }
 
-/* Ép tất cả các trạng thái về màu tím, không dùng màu mặc định hệ thống */
 element {
     padding:          8px;
     border-radius:    10px;

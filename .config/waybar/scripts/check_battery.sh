@@ -10,12 +10,12 @@ TEMP_FILE="/tmp/battery_notified"
 if [ "$STATUS" = "Discharging" ]; then
   if [ "$CAPACITY" -le 10 ]; then
     if [ "$(cat $TEMP_FILE 2>/dev/null)" != "critical" ]; then
-      notify-send -c critical "IM DYINGGG !" " $CAPACITY%" -i battery-empty
+      notify-send -c critical "IM DYINGGG !" "$CAPACITY%" -i "/usr/share/icons/Adwaita/symbolic/status/battery-action-symbolic.svg"
       echo "critical" >$TEMP_FILE
     fi
   elif [ "$CAPACITY" -le 25 ]; then
     if [ "$(cat $TEMP_FILE 2>/dev/null)" != "warning" ]; then
-      notify-send -c alert "Charge me !" " $CAPACITY%" -i battery-caution
+      notify-send -c alert "Charge me !" "$CAPACITY%" -i "/usr/share/icons/Adwaita/symbolic/status/battery-caution-symbolic.svg"
       echo "warning" >$TEMP_FILE
     fi
   fi

@@ -7,7 +7,6 @@
   "margin-right": 10,
   // "position": "bottom", // Waybar position (top|bottom|left|right)
   "height": 35, // Waybar height (to be removed for auto height)
-  // "width": 1280, // Waybar width
   "spacing": 5, // Gaps between modules (4px)
   // Choose the order of the modules
   "modules-left": [
@@ -35,7 +34,7 @@
   "custom/launcher": {
     "format": "󰣇",
     "tooltip": false,
-    "on-click": "wofi"
+    "on-click": "rofi -show drun"
   },
   "hyprland/workspaces": {
     "ignore-list": [
@@ -247,6 +246,6 @@
     // 	"hibernate": "systemctl hibernate",
     //     "lock": "hyprlock"
     // }
-    "on-click": "~/.config/wofi/powermenu.sh"
+    "on-click": "~/.config/rofi/powermenu.sh"
   }
 }

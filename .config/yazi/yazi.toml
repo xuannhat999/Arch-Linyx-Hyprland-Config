@@ -55,6 +55,7 @@ reveal = [
   { run = "termux-open %d1", desc = "Reveal", for = "android" },
   { run = "clear; exiftool %s1; echo 'Press enter to exit'; read _", desc = "Show EXIF", for = "unix", block = true },
 ]
+zathurapdf = [{ run = 'zathura "$@" &', desc = "ZathuraPDF" }]
 libreoffice = [{ run = 'libreoffice "$@"', desc = "LibreOffice" }]
 extract = [{ run = "ya pub extract --list %s", desc = "Extract here" }]
 download = [
@@ -68,6 +69,10 @@ nvim_folder = [
 
 [open]
 rules = [
+  { url = "*.pdf", use = [
+    "zathurapdf",
+    "libreoffice",
+  ] },
   { url = "*.pptx", use = "libreoffice" },
   { url = "*.docx", use = "libreoffice" },
   { url = "*.xlsx", use = "libreoffice" },

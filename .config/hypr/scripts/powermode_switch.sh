@@ -7,7 +7,7 @@ current=$(powerprofilesctl get)
 case $current in
 power-saver)
   powerprofilesctl set balanced
-  notify-send "Power Mode" " Balanced"
+  notify-send "Power Mode" "  Balanced"
   ;;
 balanced)
   powerprofilesctl set performance

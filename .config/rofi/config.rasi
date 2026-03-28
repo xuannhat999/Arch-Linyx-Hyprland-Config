@@ -1,5 +1,5 @@
 configuration {
-  modes: "window,drun,run,ssh";
+  modes: "window,drun,run,ssh,calc";
   font: "JetBrainsMono Nerd Font 12";
 /*	location: 0;*/
 /*	yoffset: 0;*/
@@ -32,7 +32,7 @@ configuration {
 /*	ignored-prefixes: "";*/
 /*	sort: false;*/
 /*	sorting-method: "normal";*/
-case-sensitive: false;
+/*> case-sensitive: false;*/
 /*	case-smart: false;*/
 /*	cycle: true;*/
 /*	sidebar-mode: false;*/
@@ -164,6 +164,10 @@ case-sensitive: false;
   filebrowser {
       directories-first: true;
       sorting-method:    "name";
+  }
+  calc {
+        hint-result: "Res: ";
+        hint-welcome: "Calc";
   }
 }
 @theme "~/.config/rofi/style.rasi"
