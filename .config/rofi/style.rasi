@@ -27,6 +27,7 @@ inputbar {
     border-color:     @border-col;
     margin:           0px 0px 10px;
     padding:          5px 15px;
+    background-color: #190e22E6;
     children:         [ entry ];
 }
 
