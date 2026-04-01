@@ -2,7 +2,7 @@
 {
   "layer": "top", // Waybar at top layer
   "margin-top": 6,
-  "margin-bottom": 3,
+  "margin-bottom": 4,
   "margin-left": 10,
   "margin-right": 10,
   // "position": "bottom", // Waybar position (top|bottom|left|right)
@@ -11,22 +11,17 @@
   // Choose the order of the modules
   "modules-left": [
     "custom/launcher",
-    "hyprland/workspaces",
-    "mpd"
+    "hyprland/workspaces"
   ],
   "modules-center": [
     "group/date-time"
   ],
   "modules-right": [
-    // "mpd",
-    // "idle_inhibitor",
     "group/system",
     "bluetooth",
     "pulseaudio",
     "group/pw",
     "network",
-    // "battery#bat2",
-    // "clock",
     "tray",
     "custom/power"
   ],
@@ -51,36 +46,7 @@
     "all-outputs": false,
     //  "warp-on-scroll": false,          
     "format": "{name}"
-    //      "format-icons": {
-    // //         "1": "",
-    // //         "2": "",
-    // //         "3": "",
-    // //         "4": "",
-    // //         "5": "",
-    //          "urgent": "",
-    //          "active": "",
-    //          "default": ""
-    //      }
   },
-  // "keyboard-state": {
-  //     "numlock": true,
-  //     "capslock": true,
-  //     "format": "{name} {icon}",
-  //     "format-icons": {
-  //         "locked": "",
-  //         "unlocked": ""
-  //     }
-  // },
-  // "hyprland/submap": {
-  //     "format": "<span style=\"italic\">{}</span>"
-  // },
-  // "sway/scratchpad": {
-  //     "format": "{icon} {count}",
-  //     "show-empty": false,
-  //     "format-icons": ["", ""],
-  //     "tooltip": true,
-  //     "tooltip-format": "{app}: {title}"
-  // },
   "tray": {
     "spacing": 10
   },

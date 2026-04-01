@@ -339,7 +339,10 @@ keymap = [
     "g",
     "f",
   ], run = "follow", desc = "Follow hovered symlink" },
-
+  { on = [
+    "g",
+    "p",
+  ], run = "cd ~/Pictures", desc = "Go ~/Pictures" },
   # Tabs
   { on = "t", run = "tab_create --current", desc = "Create a new tab with CWD" },
 
