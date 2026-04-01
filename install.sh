@@ -24,6 +24,7 @@ PACKAGES=(
   "yazi"
   "mako"
   "libreoffice-fresh"
+  "starship"
 )
 
 echo "Đang cài đặt các package từ Pacman..."
