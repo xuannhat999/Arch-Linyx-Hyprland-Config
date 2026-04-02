@@ -1,32 +1,46 @@
--- This file is used to define the dependencies of this plugin when the user is
--- using lazy.nvim.
---
--- If you are curious about how exactly the plugins are used, you can use e.g.
--- the search functionality on Github.
---
---https://lazy.folke.io/packages#lazy
-
----@module "lazy"
----@module "yazi"
-
----@type LazySpec
 return {
-  -- Needed for file path resolution mainly
-  --
-  -- https://github.com/nvim-lua/plenary.nvim/
-  { "nvim-lua/plenary.nvim", lazy = true },
-
+  ---@type LazySpec
   {
     "mikavilpas/yazi.nvim",
+    version = "*", -- use the latest stable version
+    event = "VeryLazy",
+    dependencies = {
+      { "nvim-lua/plenary.nvim", lazy = true },
+    },
+    keys = {
+      -- 👇 in this section, choose your own keymappings!
+      {
+        "<leader>-",
+        mode = { "n", "v" },
+        "<cmd>Yazi<cr>",
+        desc = "Open yazi at the current file",
+      },
+      {
+        -- Open in the current working directory
+        "<leader>cw",
+        "<cmd>Yazi cwd<cr>",
+        desc = "Open the file manager in nvim's working directory",
+      },
+      {
+        "<c-up>",
+        "<cmd>Yazi toggle<cr>",
+        desc = "Resume the last yazi session",
+      },
+    },
     ---@type YaziConfig | {}
-    opts = {},
-    cmd = {
-      "Yazi",
-      "Yazi cwd",
-      "Yazi toggle",
+    opts = {
+      -- if you want to open yazi instead of netrw, see below for more info
+      open_for_directories = false,
+      keymaps = {
+        show_help = "<f1>",
+      },
     },
-    keymaps = {
-      change_working_directory = "<n>",
-    },
+    -- 👇 if you use `open_for_directories=true`, this is recommended
+    init = function()
+      -- mark netrw as loaded so it's not loaded at all.
+      --
+      -- More details: https://github.com/mikavilpas/yazi.nvim/issues/802
+      vim.g.loaded_netrwPlugin = 1
+    end,
   },
 }

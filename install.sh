@@ -25,6 +25,13 @@ PACKAGES=(
   "mako"
   "libreoffice-fresh"
   "starship"
+  "fzf"
+  "zoxide"
+  "gnome-keyring"
+  "lazygit"
+  "lazydocker"
+  "ttf-jetbrains-mono-nerd"
+  "fcitx5-bamboo"
 )
 
 echo "Đang cài đặt các package từ Pacman..."

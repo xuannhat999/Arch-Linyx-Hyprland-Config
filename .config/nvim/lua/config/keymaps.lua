@@ -1,3 +1,17 @@
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
+vim.keymap.set("n", "<Tab>", "i", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "d", '"_d', { desc = "Xóa không lưu vào register" })
+vim.keymap.set({ "n", "v" }, "D", '"_D', { desc = "Xóa đến cuối dòng không lưu" })
+vim.keymap.set({ "n", "v" }, "x", '"_x', { desc = "Xóa kí tự không lưu clipboard" })
+
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
+vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+
 vim.keymap.set("n", "<F5>", function()
   if vim.bo.buftype == "" then
     vim.cmd("w")
@@ -104,6 +118,3 @@ vim.keymap.set("n", "<F5>", function()
   -- Gọi hàm từ module tiện ích
   -- term_util.run_in_terminal(cmd, "RUN_LOG_" .. ft:upper())
 end, { desc = "Universal Run (F5)" })
-vim.keymap.set("n", "<Tab>", "i", { noremap = true, silent = true })
-vim.keymap.set({ "n", "v" }, "d", '"_d', { desc = "Xóa không lưu vào register" })
-vim.keymap.set({ "n", "v" }, "D", '"_D', { desc = "Xóa đến cuối dòng không lưu" })
