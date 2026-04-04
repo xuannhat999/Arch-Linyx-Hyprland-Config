@@ -1,6 +1,5 @@
 * {
   font-family: "JetBrainsMono Nerd Font Propo";
-  font-size: 15px;
   margin: 0px 0px;
   border: none;
   padding: 0px 0px;
@@ -25,13 +24,15 @@ window#waybar {
 }
 
 #workspaces button {
-  margin: 0 5px;
+  margin: 0px 5px;
   background-color: transparent;
   font-size: medium;
   font-weight: bold;
-  border-radius: 15px;
+  border-radius: 10px;
   transition: all 250ms ease-in-out;
   color: #ffffff;
+  min-height: 0px;
+  border-radius: 8px;
 }
 
 #workspaces button:hover {
@@ -44,62 +45,61 @@ window#waybar {
   color: #000000;
   transition: all 250ms ease-in-out;
   min-width: 60px;
-  font-weight: bolder;
-
+  font-weight: bold;
+  margin: 0px 5px;
 }
 
 
 #window,
 #workspaces {
   background-color: #22122f;
-  border-radius: 15px;
-  padding: 4px 10px;
+  border-radius: 10px;
+  padding: 3px 5px;
   border: 1px solid #b29cc6;
   color: #b29cc6;
 }
 
 
 #date-time {
-  font-size: large;
   background-color: #22122f;
-  border-radius: 20;
-  padding: 4px 60px;
+  border-radius: 10px;
+  padding: 3px 60px;
   border: 1px solid #b29cc6;
-
 }
 
 #clock.date {
   font-weight: bolder;
+  font-size: medium;
 }
 
 #clock.time {
   color: black;
   background-color: #b29cc6;
-  border-radius: 15px;
+  border-radius: 8px;
   margin: 0 15px;
   padding: 0px 10px;
   font-weight: bolder;
-  font-size: large;
+  font-size: medium;
 }
 
 #tray {
   padding: 0 20px;
   background-color: #22122f;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 1px solid #b29cc6;
   margin: 0px 3px;
-  font-size: medium;
+  font-size: x-small;
 }
 
 #cpu,
 #memory {
-  font-size: x-small;
-
+  font-size: xx-small;
+  font-weight: bold;
 }
 
 #system {
-  padding: 1px 10px;
-  border-radius: 15px;
+  padding: 2px 10px;
+  border-radius: 10px;
   background-color: #22122f;
   border: 1px solid #b29cc6;
   margin: 0px 3px;
@@ -109,7 +109,7 @@ window#waybar {
   font-weight: bold;
   color: #32df91;
   background: transparent;
-  font-size: medium;
+  font-size: small;
 }
 
 #battery.charging,
@@ -153,7 +153,7 @@ window#waybar {
 }
 
 #custom-power {
-  font-size: 22px;
+  font-size: x-large;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -162,45 +162,21 @@ window#waybar {
   margin-left: 10px;
   font-weight: bold;
   padding-left: 3px;
-  font-size: medium;
+  font-size: small;
 }
 
 #pw {
   background-color: #22122f;
   border: 1px solid #b29cc6;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 0 15px;
   margin: 0px 3px;
 }
 
-/* #power-profiles-daemon {
-    padding-right: 15px;
-}
-
-#power-profiles-daemon.performance {
-    background-color: #f53c3c;
-    color: #ffffff;
-}
-
-#power-profiles-daemon.balanced {
-    background-color: #2980b9;
-    color: #ffffff;
-}
-
-#power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
-} */
-/* 
-label:focus {
-    background-color: #000000;
-}*/
-
-
 #network {
   padding: 0 20px;
   background-color: #22122f;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 1px solid #b29cc6;
   font-size: large;
   margin: 0px 3px;
@@ -213,7 +189,7 @@ label:focus {
   font-size: large;
   padding: 0 20px;
   background-color: #22122f;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 1px solid #b29cc6;
   margin: 0px 3px;
 }
@@ -222,7 +198,7 @@ label:focus {
   font-size: medium;
   padding: 0 20px;
   background-color: #22122f;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 1px solid #b29cc6;
   font-weight: bold;
   margin: 0px 3px;
