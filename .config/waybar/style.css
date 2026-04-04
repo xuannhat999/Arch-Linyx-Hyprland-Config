@@ -109,7 +109,7 @@ window#waybar {
   font-weight: bold;
   color: #32df91;
   background: transparent;
-  font-size: small;
+  font-size: medium;
 }
 
 #battery.charging,
@@ -162,7 +162,7 @@ window#waybar {
   margin-left: 10px;
   font-weight: bold;
   padding-left: 3px;
-  font-size: small;
+  font-size: medium;
 }
 
 #pw {
