@@ -21,9 +21,14 @@ alias grep='grep --color=auto'
 
 alias ollama-on='sudo systemctl start ollama.service'
 alias ollama-off='sudo systemctl stop ollama.service'
-alias openclaw-gw-on='systemctl --user start openclaw-gateway.service'
-alias openclaw-gw-off='systemctl --user stop openclaw-gateway.service'
 
 eval "$(fzf --bash)"
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
+
+# Bash history
+shopt -s histappend
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export HISTSIZE=10000         # Số lệnh lưu trong bộ nhớ (RAM)
+export HISTFILESIZE=20000     # Số lệnh lưu trong file trên ổ cứng
+export HISTCONTROL=ignoreboth # Không lưu lệnh trùng nhau liên tiếp và lệnh có khoảng trắng phía trước
