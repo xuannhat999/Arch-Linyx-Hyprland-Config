@@ -10,28 +10,40 @@ sudo pacman -Syu --noconfirm
 
 # 2. Cài đặt các package cơ bản từ kho chính (Pacman)
 PACKAGES=(
+  # CORE
   "neovim"
   "stow"
-  "git"
   "kitty"
   "waybar"
   "hyprland"
+  "gnome-keyring"
+  "fcitx5-bamboo"
+  "hyprlock"
+  "hyprpaper"
+  "hyprshot"
+  "hypridle"
+  # TUI MANAGER
   "wiremix"
   "bluetui"
-  "papirus-icon-theme"
-  "rofi"
-  "rofi-calc"
+  "impala"
   "yazi"
   "mako"
+  "rofi"
+  "rofi-calc"
+  # THEME
+  "papirus-icon-theme"
+  "ttf-jetbrains-mono-nerd"
+  "noto-fonts-cjk"
+  # UTILS
   "libreoffice-fresh"
   "starship"
   "fzf"
   "zoxide"
-  "gnome-keyring"
   "lazygit"
   "lazydocker"
-  "ttf-jetbrains-mono-nerd"
-  "fcitx5-bamboo"
+  "zathura"
+  "zathura-pdf-mupdf"
+
 )
 
 echo "Đang cài đặt các package từ Pacman..."
@@ -48,7 +60,6 @@ fi
 # 4. Cài đặt các package từ AUR
 AUR_PACKAGES=(
   "catppuccin-gtk-theme-mocha"
-  "wifitui"
   "brave-bin"
   "android_studio"
 )

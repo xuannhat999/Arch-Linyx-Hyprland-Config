@@ -66,7 +66,7 @@ detect_extensions = ["c", "cpp", "cc", "cxx", "h", "hpp"]
 [rust]
 symbol = ""
 style = "bg:#272e3f"
-format = '[[ $symbol ](fg:#769ff0)]($style)'
+format = '[[ $symbol ](fg:#769ff0 bg:#272e3f)]($style)'
 
 [golang]
 symbol = ""

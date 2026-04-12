@@ -111,9 +111,6 @@ window#waybar {
 }
 
 /* #battery.critical { */
-/*   color: #e63636; */
-/* } */
-/* /* Using steps() instead of linear as a timing function to limit cpu usage */ */
 #battery.critical:not(.charging) {
   color: #e63636;
 }
