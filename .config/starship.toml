@@ -3,6 +3,7 @@
 format = """
 [░▒▓](#a3aed2)\
 [ 󰣇 ](bold bg:#a3aed2 fg:#090c0c)\
+$username\
 [](bg:#769ff0 fg:#a3aed2)\
 $directory\
 [](fg:#769ff0 bg:#394260)\
@@ -19,6 +20,13 @@ $c\
 [](fg:#272e3f)\
 \n$character"""
 
+[username]
+style_user = " bold fg:#090c0c bg:#a3aed2"
+style_root = " bold fg:#760303 bg:#a3aed2"
+show_always = true
+format = "[ $user ]($style)"
+disabled = false
+
 [directory]
 style = " bold fg:#090c0c bg:#769ff0"
 format = "[ $path ]($style)"
@@ -30,7 +38,7 @@ truncation_symbol = "…/"
 "Downloads" = " "
 "Music" = " "
 "Pictures" = " "
-"~" = "󰋜"
+"~" = "󰋜 "
 
 [git_branch]
 symbol = ""
