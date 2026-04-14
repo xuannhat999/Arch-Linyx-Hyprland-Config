@@ -36,7 +36,7 @@
     },
     {
       "type": "kernel",
-      "key": " 󰌢  KERNEL  ",
+      "key": "   KERNEL  ",
       "keyColor": "38;5;111"
     },
     {
@@ -63,7 +63,7 @@
     },
     {
       "type": "gpu",
-      "key": " 󰍹  GPU     ",
+      "key": " 󰢮  GPU     ",
       "keyColor": "38;5;147",
       "format": "{2}"
     },
