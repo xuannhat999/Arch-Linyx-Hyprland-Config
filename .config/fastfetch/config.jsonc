@@ -18,7 +18,7 @@
   "modules": [
     {
       "type": "title",
-      "format": "    \u001b[90m      󰌽      {user-name}     \u001b[90m  󰌽",
+      "format": "    \u001b[90m      󰌽      {user-name}    \u001b[90m  󰌽",
       "color": {
         "user": "38;5;111",
         "host": "38;5;111"
