@@ -1,6 +1,7 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
+--
 vim.keymap.set("n", "<Tab>", "i", { noremap = true, silent = true })
 vim.keymap.set({ "n", "v" }, "d", '"_d', { desc = "Xóa không lưu vào register" })
 vim.keymap.set({ "n", "v" }, "D", '"_D', { desc = "Xóa đến cuối dòng không lưu" })
@@ -109,7 +110,7 @@ vim.keymap.set("n", "<F5>", function()
   require("snacks").terminal.open(cmd, {
     win = {
       position = "bottom", -- Mở ở dưới
-      height = 0.4, -- Chiếm 40% màn hình
+      height = 0.3,
     },
     -- Đặt tên để Snacks quản lý (giúp không mở nhiều window)
     name = "RUN_LOG_" .. ft:upper(),
@@ -118,3 +119,12 @@ vim.keymap.set("n", "<F5>", function()
   -- Gọi hàm từ module tiện ích
   -- term_util.run_in_terminal(cmd, "RUN_LOG_" .. ft:upper())
 end, { desc = "Universal Run (F5)" })
+
+vim.keymap.set("n", "<C-/>", function()
+  require("snacks").terminal.toggle(nil, {
+    win = {
+      position = "bottom",
+      height = 0.3,
+    },
+  })
+end, { desc = "Terminal (Fixed Height)" })
