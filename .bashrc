@@ -10,7 +10,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export NO_AT_BRIDGE=1
 export _JAVA_OPTIONS='-Dsun.java2d.opengl=false -Dsun.java2d.xrender=false'
 export WB_FORCE_SYSTEM_COLORS=1
-
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' --color=fg:#c4c4c4,bg:#121212,hl:#8d60db --color=fg+:#dbdbdb,bg+:#262626,hl+:#cba8ff --color=info:#79c2c9,prompt:#00ffe1,pointer:#af5fff --color=marker:#6da9d1,spinner:#af5fff,header:#87afaf'
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
