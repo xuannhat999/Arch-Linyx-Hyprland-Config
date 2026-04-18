@@ -3,6 +3,22 @@
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 # In Yazi, bind a key to copy file URIs to clipboard
 
+
+[[mgr.prepend_keymap]]
+on = ["c", "p"]
+run = "plugin convert -- --extension='png'"
+desc = "Convert selected files to PNG"
+
+[[mgr.prepend_keymap]]
+on = ["c", "j"]
+run = "plugin convert -- --extension='jpg'"
+desc = "Convert selected files to JPG"
+
+[[mgr.prepend_keymap]]
+on = ["c", "w"]
+run = "plugin convert -- --extension='webp'"
+desc = "Convert selected files to WebP"
+
 [[mgr.prepend_keymap]]
 on = ["g", "i"]
 run = "plugin lazygit"
