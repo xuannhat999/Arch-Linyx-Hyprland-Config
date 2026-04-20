@@ -30,7 +30,7 @@ mainbox {
 
 listview {
     columns:          1;
-    lines:            4;        
+    lines:            5;        
     spacing:          0px;
     cycle:            true;
     dynamic:          true;
@@ -39,7 +39,7 @@ listview {
 }
 
 element {
-    padding:          32px 0px;
+    padding:          21px 0px;
     border-radius:    10px;
     cursor:           pointer;
 }
@@ -48,7 +48,7 @@ element-text {
     background-color: inherit;
     text-color:       @fg-col;
     vertical-align:   0.5;
-    horizontal-align: 0;        /* Căn giữa chữ trong item */
+    padding: 0px 10px;
 }
 
 /* Ép màu khi được chọn */

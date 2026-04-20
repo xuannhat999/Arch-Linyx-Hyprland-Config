@@ -2,7 +2,7 @@
 {
   "layer": "top", // Waybar at top layer
   "margin-top": 4,
-  "margin-bottom": 3,
+  "margin-bottom": 2,
   "margin-left": 10,
   "margin-right": 10,
   // "position": "bottom", // Waybar position (top|bottom|left|right)
@@ -30,14 +30,12 @@
     "on-click": "rofi -show drun"
   },
   "hyprland/workspaces": {
-       "persistent-workspaces": {
+    "persistent-workspaces": {
       "*": 5
     },
     "persistent": true,
     "active-only": false,
-    //  "disable-scroll": true,
     "all-outputs": false,
-    //  "warp-on-scroll": false,          
     "format": "{name}"
   },
   "tray": {
@@ -75,7 +73,6 @@
       "memory"
     ]
   },
-
   "group/pw": {
     "orientation": "horizontal",
     "modules": [
@@ -83,7 +80,6 @@
       "power-profiles-daemon"
     ]
   },
-
   "battery": {
     "states": {
       "good": 100,
@@ -95,8 +91,6 @@
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{icon} {time}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
     "format-icons": [
       "",
       "",
@@ -133,25 +127,18 @@
       "connected": "󰂱",
       "disabled": "󰂲"
     },
-    // "format-connected-battery": " {device_alias} {device_battery_percentage}%",
-    // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
-    // "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-    // "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-connected": "{num_connections} connected\n\n{device_enumerate}",
-    // "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%",
     "on-click": "~/.config/hypr/scripts/launch_bluetui.sh"
   },
   "network": {
     "interface": "wlan0",
     "format-wifi": "󱚽",
-    // "format-ethernet": "{ipaddr}/{cidr} ",
-    // "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-ethernet": "",
     "tooltip-format": "{essid} ({signalStrength}%)",
     "format-linked": "󱚸",
     "format-disconnected": "󱛅",
     "format-disabled": "󰖪",
-    // "format-alt": "{ifname}: {ipaddr}/{cidr}"
     "on-click": "~/.config/hypr/scripts/launch_wifitui.sh"
   },
   "pulseaudio": {
@@ -159,8 +146,6 @@
     // "format-bluetooth": "{icon} {volume}%",
     "format-bluetooth-muted": "",
     "format-muted": "",
-    // "format-source": "{volume}% ",
-    // "format-source-muted": "",
     "format-icons": {
       "headphone": "",
       "headset": "",
@@ -174,12 +159,10 @@
     },
     "on-click": "~/.config/hypr/scripts/launch_wiremix.sh"
   },
-
   "custom/power": {
     "icon-size": 21,
     "format": "⏻",
     "tooltip": false,
-
     "on-click": "~/.config/rofi/powermenu.sh"
   }
 }

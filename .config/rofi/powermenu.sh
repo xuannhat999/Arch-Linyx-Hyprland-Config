@@ -3,7 +3,7 @@
 # Đường dẫn tới file theme .rasi bạn vừa tạo
 THEME="$HOME/.config/rofi/power-menu-style.rasi"
 
-chosen=$(printf "  Shutdown\n  Reboot\n󰤄  Suspend\n󰍃  Logout" |
+chosen=$(printf "  Shutdown\n  Reboot\n  Lock\n󰤄  Suspend\n󰍃  Logout" |
   rofi -dmenu \
     -p "Power Menu" \
     -theme "$THEME" \
@@ -14,6 +14,7 @@ chosen=$(printf "  Shutdown\n  Reboot\n󰤄  Suspend\n󰍃  Logout" |
 case "$chosen" in
 *Shutdown) systemctl poweroff ;;
 *Reboot) systemctl reboot ;;
+*Lock) sleep 0.1 && hyprlock ;;
 *Suspend) systemctl suspend ;;
-*Logout) hyprctl dispatch exit 0 ;; # Lệnh logout chuẩn cho Hyprland
+*Logout) hyprctl dispatch exit 0 ;;
 esac
