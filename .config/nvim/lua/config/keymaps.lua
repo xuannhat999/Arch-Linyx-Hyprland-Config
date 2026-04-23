@@ -3,16 +3,8 @@
 -- Add any additional keymaps here
 --
 vim.keymap.set("n", "<Tab>", "i", { noremap = true, silent = true })
-vim.keymap.set({ "n", "v" }, "d", '"_d', { desc = "Xóa không lưu vào register" })
-vim.keymap.set({ "n", "v" }, "D", '"_D', { desc = "Xóa đến cuối dòng không lưu" })
-vim.keymap.set({ "n", "v" }, "x", '"_x', { desc = "Xóa kí tự không lưu clipboard" })
-
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
-vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
-vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
-
+vim.keymap.set({ "n", "v" }, "x", [["_d]], { noremap = true })
+vim.keymap.set("n", "xx", [["_dd]], { noremap = true })
 vim.keymap.set("n", "<F5>", function()
   if vim.bo.buftype == "" then
     vim.cmd("w")
@@ -124,7 +116,7 @@ vim.keymap.set("n", "<C-/>", function()
   require("snacks").terminal.toggle(nil, {
     win = {
       position = "bottom",
-      height = 0.3,
+      height = 0.2,
     },
   })
 end, { desc = "Terminal (Fixed Height)" })

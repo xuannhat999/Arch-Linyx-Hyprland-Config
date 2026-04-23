@@ -19,13 +19,18 @@ PACKAGES=(
   "gnome-keyring"
   "fcitx5-bamboo"
   "hyprlock"
-  "hyprpaper"
+  "swaybg"
   "hyprshot"
   "hypridle"
   "bluez"
   "bluez-utils"
   "pipewire-pulse"
   "wirepluber"
+  "greetd"
+  "greetd-tuigreet"
+  "7zip"
+  "zip"
+  "unzip"
   # TUI MANAGER
   "wiremix"
   "bluetui"
@@ -49,6 +54,8 @@ PACKAGES=(
   "lazydocker"
   "zathura"
   "zathura-pdf-mupdf"
+  "fastfetch"
+  "btop"
 
 )
 

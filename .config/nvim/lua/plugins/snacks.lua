@@ -1,17 +1,11 @@
 return {
   "folke/snacks.nvim",
   opts = {
-    -- terminal = {
-    --   win = {
-    --     height = 0.3,
-    --   },
-    -- },
     explorer = {
       files = {
-        dotfiles = true, -- Luôn hiện file bắt đầu bằng dấu chấm
-        -- git_ignored = false, -- KHÔNG ẩn các file trong .gitignore
+        dotfiles = true,
         ignored = false,
-        hidden = true, -- Hiện các file ẩn hệ thống
+        hidden = true,
       },
     },
     picker = {

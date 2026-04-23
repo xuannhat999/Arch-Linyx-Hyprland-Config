@@ -47,5 +47,4 @@ require("lazy").setup({
     },
   },
 })
-vim.cmd("colorscheme catppuccin-mocha")
 vim.g.root_spec = { "cwd" }
