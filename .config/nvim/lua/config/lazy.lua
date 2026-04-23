@@ -14,6 +14,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.g.root_spec = { "cwd" }
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
@@ -47,4 +48,3 @@ require("lazy").setup({
     },
   },
 })
-vim.g.root_spec = { "cwd" }
