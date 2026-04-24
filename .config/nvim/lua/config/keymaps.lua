@@ -2,6 +2,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 --
+vim.keymap.set("n", "<leader>e", function()
+  Snacks.explorer({ cwd = vim.fn.getcwd() })
+end, { desc = "Explorer Snacks (cwd)" })
 vim.keymap.set("n", "<Tab>", "i", { noremap = true, silent = true })
 vim.keymap.set({ "n", "v" }, "x", [["_d]], { noremap = true })
 vim.keymap.set("n", "xx", [["_dd]], { noremap = true })

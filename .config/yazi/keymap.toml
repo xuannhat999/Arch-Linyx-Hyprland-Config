@@ -6,6 +6,7 @@
 on = "T"
 run = "plugin recycle-bin"
 desc = "Trash bin"
+
 [[mgr.prepend_keymap]]
 on = ["c", "p"]
 run = "plugin convert -- --extension='png'"

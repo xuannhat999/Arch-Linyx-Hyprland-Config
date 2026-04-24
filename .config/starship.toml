@@ -30,7 +30,7 @@ disabled = false
 [directory]
 style = " bold fg:#090c0c bg:#769ff0"
 format = "[ $path ]($style)"
-truncation_length = 3
+truncation_length = 4
 truncation_symbol = "…/"
 
 [directory.substitutions]
@@ -38,6 +38,7 @@ truncation_symbol = "…/"
 "Downloads" = ""
 "Music" = ""
 "Pictures" = ""
+"Videos" = ""
 "~" = "󰋜"
 
 [git_branch]
