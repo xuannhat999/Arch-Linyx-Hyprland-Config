@@ -21,6 +21,7 @@ alias grep='grep --color=auto'
 alias ollama-on='sudo systemctl start ollama.service'
 alias ollama-off='sudo systemctl stop ollama.service'
 alias db='cd ~/schema && nvim -c "DBUIToggle"'
+alias y='yazi'
 
 eval "$(fzf --bash)"
 eval "$(starship init bash)"
