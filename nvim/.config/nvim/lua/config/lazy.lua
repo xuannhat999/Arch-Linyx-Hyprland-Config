@@ -48,3 +48,4 @@ require("lazy").setup({
     },
   },
 })
+vim.o.pumheight = 6 -- Limits completion menu to 10 items
