@@ -15,22 +15,4 @@ end
 require("starship"):setup({
 	count_separator = " ",
 })
-require("fs-usage"):setup({
-	position = { parent = "Header", align = "RIGHT", order = 2000 },
-	format = "both",
-
-	bar = true,
-
-	warning_threshold = 90,
-
-	style_label = {
-		fg = "",
-		bold = true,
-	},
-	style_normal = {
-		fg = "#89b4fa",
-	},
-	style_warning = {},
-	padding = { open = "", close = "" },
-})
 require("recycle-bin"):setup()
