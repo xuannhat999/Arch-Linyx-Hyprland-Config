@@ -7,7 +7,7 @@ return {
     keys = {
       {
         "<leader>-",
-        "<cmd>Yazi cwd<cr>",
+        "<cmd>Yazi toggle<cr>",
         mode = { "n", "v" },
         desc = "Yazi",
       },
