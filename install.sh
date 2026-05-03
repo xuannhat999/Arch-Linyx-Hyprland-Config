@@ -2,7 +2,8 @@
 
 # Dừng script nếu có lỗi xảy ra
 set -e
-
+mkdir -p ~/Pictures/Wallpapers/
+cp wallpaper1.jpg ~/Pictures/Wallpapers/
 echo "--- Bắt đầu cài đặt Dotfiles ---"
 
 # 1. Cập nhật hệ thống
